@@ -1,1 +1,203 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Hoso ❤️</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Cairo',sans-serif;
+}
+
+body{
+
+background:linear-gradient(135deg,#3f0000,#920000,#d61a1a,#ff4b4b);
+background-size:400% 400%;
+animation:bg 12s infinite alternate;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+min-height:100vh;
+overflow:hidden;
+
+}
+
+@keyframes bg{
+
+0%{background-position:left;}
+100%{background-position:right;}
+
+}
+
+.card{
+
+width:92%;
+max-width:430px;
+
+padding:35px;
+
+background:rgba(255,255,255,.14);
+
+backdrop-filter:blur(18px);
+
+border-radius:28px;
+
+text-align:center;
+
+box-shadow:0 0 35px rgba(255,255,255,.25);
+
+color:white;
+
+z-index:5;
+
+position:relative;
+
+animation:show .8s;
+
+}
+
+@keyframes show{
+
+from{
+opacity:0;
+transform:translateY(40px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+h1{
+
+font-size:34px;
+margin-bottom:15px;
+
+}
+
+p{
+
+font-size:19px;
+line-height:1.8;
+
+margin-bottom:20px;
+
+}
+
+button{
+
+width:100%;
+
+padding:15px;
+
+border:none;
+
+border-radius:35px;
+
+background:white;
+
+color:#b30000;
+
+font-size:18px;
+
+font-weight:bold;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+button:hover{
+
+transform:scale(1.05);
+
+}
+
+.heart{
+
+position:absolute;
+
+font-size:22px;
+
+animation:fall linear infinite;
+
+opacity:.5;
+
+}
+
+@keyframes fall{
+
+0%{
+
+transform:translateY(-100px);
+
+}
+
+100%{
+
+transform:translateY(110vh);
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="card">
+
+<h1>❤️ Happy Birthday Hoso ❤️</h1>
+
+<p>
+
+To My Favorite Person 🥹❤️
+
+</p>
+
+<button id="startBtn">
+
+❤️ Start The Surprise ❤️
+
+</button>
+
+</div>
+
+<script>
+
+for(let i=0;i<25;i++){
+
+let h=document.createElement("div");
+
+h.className="heart";
+
+h.innerHTML="❤️";
+
+h.style.left=Math.random()*100+"vw";
+
+h.style.animationDuration=(6+Math.random()*8)+"s";
+
+h.style.fontSize=(18+Math.random()*20)+"px";
+
+document.body.appendChild(h);
+
+}
+
+</script>
+
+</body>
+</html>
